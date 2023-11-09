@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "category": {
-      "type": "string",
-      "required": true
-    },
     "heading": {
       "type": "string",
       "required": true
@@ -32,11 +28,23 @@
       "type": "datetime"
     },
     "Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Sports",
+        "Business",
+        "Weather",
+        "Regular news"
       ],
-      "type": "media",
-      "multiple": true
+      "required": true,
+      "default": "Regular news"
     }
   }
 }

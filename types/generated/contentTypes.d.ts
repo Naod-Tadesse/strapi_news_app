@@ -374,12 +374,16 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    category: Attribute.String & Attribute.Required;
     heading: Attribute.String & Attribute.Required;
     journalist: Attribute.String & Attribute.Required;
     body: Attribute.RichText & Attribute.Required;
     DatePublished: Attribute.DateTime;
     Media: Attribute.Media;
+    category: Attribute.Enumeration<
+      ['Sports', 'Business', 'Weather', 'Regular news']
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'Regular news'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
