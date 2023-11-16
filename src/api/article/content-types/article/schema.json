@@ -20,10 +20,6 @@
       "type": "string",
       "required": true
     },
-    "body": {
-      "type": "richtext",
-      "required": true
-    },
     "DatePublished": {
       "type": "datetime"
     },
@@ -45,6 +41,11 @@
       ],
       "required": true,
       "default": "Regular news"
+    },
+    "body": {
+      "type": "string",
+      "required": true,
+      "default": "news"
     }
   }
 }
